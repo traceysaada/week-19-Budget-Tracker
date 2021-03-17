@@ -1,0 +1,6 @@
+// this file is all about setting up indexedDB 
+
+//in this file we will have an event listener on window itself waiting for it to come online...
+
+// when the application comes online - we need to check the database, get each entry in the db... 
+// then send them all to the /api/transaction/bulk end point 
