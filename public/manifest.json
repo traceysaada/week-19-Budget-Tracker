@@ -1,18 +1,15 @@
 {
-    "name": "budget tracker",
-    "icons": [
-        
-        {
-            "src": "icons/icon-512x512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
+  "name": "budget tracker",
+  "icons": [
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
 
-    ],
-
-    "start_url": "/",
-    "display": "standalone",
-    "theme-color": "#ffffff",
-    "background-color": "#ffffff"
-
+  "start_url": "/",
+  "display": "standalone",
+  "theme-color": "#ffffff",
+  "background-color": "#ffffff"
 }
