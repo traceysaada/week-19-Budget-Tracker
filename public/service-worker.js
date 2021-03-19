@@ -1,5 +1,3 @@
-const { response } = require("express");
-
 //create variables that name the cache
 var CACHE = "budget-cache";
 var DATA_CACHE = "budget-data-cache";
@@ -19,28 +17,12 @@ var applicationUrls = [
 self.addEventListener("install", function (event) {
   event.waitUntil(
     caches.open(CACHE).then(function (cache) {
-      return cache.addAll(applicationUrls);
+      cache.addAll(applicationUrls);
     })
   );
-  self.skipWaiting();
+ 
 });
 
-self.addEventListener("activate", function (evt) {
-  evt.waitUntil(
-    caches.keys().then((keyList) => {
-      return Promise.all(
-        keyList.map((key) => {
-          if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
-            console.log("Removing old cache data", key);
-            return caches.delete(key);
-          }
-        })
-      );
-    })
-  );
-
-  self.clients.claim();
-});
 
 self.addEventListener("fetch", function (event) {
   //implement functionality which will enable all requests coming in on /api routes  (think.... if statements)
